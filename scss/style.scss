@@ -1,0 +1,139 @@
+@import '_normalize';
+@import '_vars';
+@import '_mixins';
+
+*{
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	background: linear-gradient(45deg, #ff512f, #dd2476);
+	font:  13px/1.6 'Arial', sans-serif;
+	color: $text-color;
+	margin: 0 auto;
+	
+}
+
+.card{
+    background-color: #fff;
+    width: 461px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 30px;
+
+    &__title{
+		margin: 0;
+		padding: 0 0 0 36px;
+		color: $title-color;
+		font-size: 24px;
+		font-weight: bold;
+		line-height: 24px;
+
+    	position: relative;
+    	&:before{
+    		content: '';
+    		position: absolute;
+    		background-position: center center;
+    		background-image: url(../img/key.png);
+    		background-repeat: no-repeat;
+    		width: 24px;
+    		height: 24px;
+    		left: 0;
+    		top: 0;
+
+    	}
+    }
+
+    &__text--sm{
+		font-size: 12px;
+    }
+
+
+    &__link{
+	text-decoration: none;
+	color: $action-color;
+	border-bottom: 1px solid transparent;
+	transition: all .5s;
+
+	&:hover,
+	&:focus,
+	&:active{
+		border-bottom-color: $action-color;
+	}
+
+}
+}
+
+
+
+.form__row{
+	padding-top: 17px;
+}
+
+.form__row::before,
+.form__row::after{
+	content: '';
+	display: table;
+}
+.form__row::after{
+	clear: both;
+}
+
+.form__col{
+	float: left;
+	width: 48%;
+
+}
+
+.form__col + .form__col{
+	margin-left: 4%;
+}
+.form__input{
+	background-color: #f0f0f0;
+	width: 100%;
+	border: 1px solid transparent;
+	padding: 12px;
+	border-radius: 5px;
+
+}
+.form__input:focus{
+	border: 1px solid $action-color;
+	outline: none;
+}
+
+
+.form__btn{
+	color: #fff;
+	background-color: $action-color;
+	border: 3px solid transparent;
+	border-bottom: 3px solid #bd1962;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	padding: 9px 12px;
+	line-height: 1;
+	font-size: 18px;
+	font-weight: bold;
+	transition: all .25s;
+
+	border-radius: 5px;
+
+}
+
+.form__btn:not(:disabled):not(.disabled):hover,
+.form__btn:not(:disabled):not(.disabled):focus,
+.form__btn:not(:disabled):not(.disabled):active{
+	background-color: #bd1962;
+	border: 3px solid $action-color;
+}
+// .form__btn:disabled,
+// .form__btn.disabled{
+// 	color: #bd1962;
+// 	cursor: not-allowed;
+// }

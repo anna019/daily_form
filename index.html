@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Start</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="icon" href="favicon.png"/>
+	
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	
+</head>
+<body>
+	<div class="card">
+		<h1 class="card__title">Create your free account</h1>
+		<div class="card__text"><p>Come and join our cool and amazing community, fill in your details to get started. Already have an account? <a class="card__link" href="#">Log in.</a></p></div>
+		<form action="" method="post"	class="form">
+				
+				<div class="form__row">
+					 
+					<div class="form__col">
+						 <input class="form__input" name="name" type="text" id="name" placeholder="First name"  required>
+					</div>
+					<div class="form__col">
+						 <input class="form__input" type="text" id="lastname" placeholder="Last name" name="lastname" required>
+					</div>
+				</div>
+				<div class="form__row">
+					<input class="form__input" type="email" name="email-address" placeholder="Email address" required>
+				</div>
+				<div class="form__row">
+					<input class="form__input" type="password" id="password" name="password" placeholder="Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+				</div>
+				<div class="form__row">
+					<input type="submit" class="form__btn" name="submit" value="Sign up for free"> 
+				</div>
+				
+			</form>
+		<div class="card__text card__text--sm"><p>By clicking on “Sign up for free”, you agree to the <a class="card__link" href="#"> Terms of Service </a> and the <a class="card__link" href="#"> Privacy Policy</a></p></div>
+	</div>
+</body>
+</html>
